@@ -14,7 +14,11 @@ margin:80px;
 margin-top:5px;
 margin-bottom: 5px;
 }
-body {
+html, body {
 	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
   }
+p{
+	margin:10px;
+}
 

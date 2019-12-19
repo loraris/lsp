@@ -1,40 +1,36 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  <mat-sidenav
+	  #drawer
+	  class="sidenav"
+	  fixedInViewport="false"
+      [attr.role]="isHandset$ ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+      [opened]="(isHandset$ | async)!.matches">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item (click)="closeSideNav()">Link 1</a>
+      <a mat-list-item (click)="closeSideNav()">Link 2</a>
+      <a mat-list-item (click)="closeSideNav()">Link 3</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
+		<mat-toolbar color="primary">
+				<button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+				  <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+				</button>
 	  <span>lsp</span>
+	  <span class="spacer"></span>
+	  <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a>
 	</mat-toolbar>
-		<p>
-		At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-		praesentium voluptatum deleniti atque corrupti quos dolores et quas
-		molestias excepturi sint occaecati cupiditate non provident, similique sunt
-		in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-		fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-		tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus
-		id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis
-		dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut
-		rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-		molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
-		delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
-		perferendis doloribus asperiores repellat.
-		</p>
+		<ng-content></ng-content>
   	</mat-sidenav-content>
 </mat-sidenav-container>
+<div>
+	<button id="red">Red</button>
+	<button id="black">Black</button>
+  </div>
+  <div>Red: <span id="red-total"></span></div>
+  <div>Black: <span id="black-total"></span></div>
+  <div>Total: <span id="total"></span></div>

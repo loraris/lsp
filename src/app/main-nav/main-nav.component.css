@@ -4,6 +4,8 @@
 
 .sidenav {
   width: 200px;
+  box-shadow: 2px 0 5px rgba(0,0,0, .24);
+
 }
 
 .sidenav .mat-toolbar {
@@ -16,6 +18,26 @@
   z-index: 1;
 }
 
-p{
-	margin:10px;
+.hidden {
+	display: none;
 }
+
+.spacer {
+	flex: 1 1 auto;
+}
+
+mat-toolbar a {
+	display: inline-block;
+	margin: 0 10px;
+	color: white;
+	text-decoration: none;
+}
+
+/* @media (min-width: 768px) {
+	.sidenav {
+		display: none;
+	}
+} */
+
+
+
