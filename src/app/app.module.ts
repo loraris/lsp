@@ -12,12 +12,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-	MainNavComponent
+	MainNavComponent,
   ],
   imports: [
 	BrowserModule,
@@ -30,13 +30,6 @@ import { reducers, metaReducers } from './reducers';
 	MatSidenavModule,
 	MatIconModule,
 	MatListModule,
-	StoreModule.forRoot(reducers, {
-      metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true
-      }
-    })
   ],
   providers: [],
   bootstrap: [AppComponent]

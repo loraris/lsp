@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'lsp';
   navbarOpen = false;
 
-	toggleNavbar() {
+	toggle() {
 		this.navbarOpen = !this.navbarOpen;
 	}
 }
