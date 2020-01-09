@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lsp';
-  navbarOpen = false;
+  navbarOpen = true;
 
 	toggle() {
 		this.navbarOpen = !this.navbarOpen;
