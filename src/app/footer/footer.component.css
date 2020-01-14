@@ -1,0 +1,44 @@
+.footer{
+	background-color: #eee;
+	padding: 25px;
+	text-align: center;
+}
+
+ul, a{
+	list-style-type: none;
+}
+
+li{
+	display: inline-block;
+	margin:auto;
+}
+
+.row{
+margin: auto;
+margin-top:5px;
+margin-bottom: 5px;
+text-align: left;
+}
+
+html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+  }
+
+  @media (max-width: 700px) {
+	.footer {
+	  padding:5px;
+	}
+	ul, a, li{
+		list-style-type: none;
+		margin:auto;
+
+	}
+	.row{
+		text-align: center;
+	}
+
+
+  }
+
+
