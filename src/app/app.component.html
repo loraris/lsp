@@ -1,13 +1,31 @@
+<mat-sidenav-container class="sidenav-container">
+	<mat-sidenav #drawer class="sidenav" fixedInViewport
+		[attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+		[mode]="(isHandset$ | async)"
+		[opened]="false">
+	  <mat-nav-list>
+		<a mat-list-item href="/about">About</a>
+		<a mat-list-item href="/contact">Contact</a>
+	  </mat-nav-list>
+	</mat-sidenav>
+	<mat-sidenav-content>
+	  <mat-toolbar color="primary">
+		<button
+		  type="button"
+		  aria-label="Toggle sidenav"
+		  mat-icon-button
+		  (click)="drawer.toggle()">
 
-<header>
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</header>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1" /="/">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-	<main-nav></main-nav>
-</body>
+		  <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+		</button>
+		<span>LSP</span>
+		<span class="spacer"></span>
+		<a mat-list-item href="#">Link 1</a>
+		<a mat-list-item href="#">Link 2</a>
+		<a mat-list-item href="#">Link 3</a>
+	  </mat-toolbar>
+	  <router-outlet></router-outlet>
+	  <p>correct CONTENT</p>
+	  <app-footer></app-footer>
+	</mat-sidenav-content>
+</mat-sidenav-container>
