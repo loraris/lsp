@@ -55,4 +55,13 @@ html, body {
 	  color: white;
 	  text-decoration: none;
   }
+  .mat-list-item:hover {
+	background-color:#eee;
+	}
 /* End of navigation css. */
+
+@media (max-width: 600px) {
+	.mat-list-item:hover {
+		background-color:#eee;
+	}
+}
