@@ -1,0 +1,9 @@
+<mat-sidenav #drawer class="sidenav" fixedInViewport
+		[attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+		[mode]="(isHandset$ | async)"
+		[opened]="false">
+	<mat-nav-list>
+		<a mat-list-item href="/about">About</a>
+		<a mat-list-item href="/contact">Contact</a>
+	</mat-nav-list>
+</mat-sidenav>
