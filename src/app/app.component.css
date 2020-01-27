@@ -60,6 +60,19 @@ mat-toolbar a:hover{
 }
 /* End of navigation css. */
 
+.search-form{
+	display: flex;
+	flex-direction: column;
+	margin: 200px;
+  }
+.prop-type-chexkbox{
+	margin: auto;
+}
+
+mat-checkbox{
+	margin: 0 10px;
+}
+
 @media (max-width: 600px) {
 	mat-toolbar a:hover{
 		color: #d1d8ff;

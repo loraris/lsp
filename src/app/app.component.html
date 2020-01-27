@@ -24,8 +24,36 @@
 		<a mat-list-item href="#">Link 2</a>
 		<a mat-list-item href="#">Link 3</a>
 	  </mat-toolbar>
-	  <router-outlet></router-outlet>
-	  <p>correct CONTENT</p>
+	  <router-outlet>
+<!-- Search form start -->
+	<div class="search-form">
+	  <mat-form-field>
+		  <mat-label>City</mat-label>
+		<select matNativeControl required>
+			<option value="city1">Sofia</option>
+			<option value="city2">Plovdiv</option>
+		</select>
+	  </mat-form-field>
+	  <mat-form-field>
+		<select matNativeControl required>
+			<option value="sale">For sale</option>
+			<option value="rent">For rent</option>
+		</select>
+	  </mat-form-field>
+
+	  <div class="prop-type-chexkbox">
+
+		<mat-checkbox>House</mat-checkbox>
+		<mat-checkbox>Apartment</mat-checkbox>
+		<mat-checkbox>Office</mat-checkbox>
+		<mat-checkbox>Store</mat-checkbox>
+		<mat-checkbox>Garage</mat-checkbox>
+		<mat-checkbox>Land</mat-checkbox>
+	</div>
+
+	</div>
+<!-- Search form end -->
+</router-outlet>
 	  <app-footer></app-footer>
 	</mat-sidenav-content>
 </mat-sidenav-container>
